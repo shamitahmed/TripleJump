@@ -7,6 +7,12 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     public bool startGame;
+    public bool dead;
+    public bool escape;
+    public string levelKey = "levelkey";
+    public int levelNumber;
+    public GameObject escapeRocket;
+
 
     private void Awake()
     {
@@ -15,7 +21,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        levelNumber = PlayerPrefs.GetInt(levelKey);
     }
 
     // Update is called once per frame

@@ -17,7 +17,18 @@ public class Obstacle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (GameManager.instance.levelNumber < 2)
+        {
+            speed = 3f;
+        }
+        else if (GameManager.instance.levelNumber < 5)
+        {
+            speed = 3.5f;
+        }
+        else
+        {
+            speed = 4f;
+        }
     }
 
     // Update is called once per frame

@@ -45,12 +45,42 @@ public class UIManager : MonoBehaviour
     }
     public void RetryBtn()
     {
-        SceneManager.LoadScene("SampleScene");
+        GameManager.instance.totalFailNumber = PlayerPrefs.GetInt(GameManager.instance.totalFailedKey,0);
+        GameManager.instance.totalFailNumber++;
+        PlayerPrefs.SetInt(GameManager.instance.totalFailedKey, GameManager.instance.totalFailNumber);
+        if (GameManager.instance.totalFailNumber % 2 ==0)
+        {
+            if(ADManager.instance.IsInterstitialReady())
+                ADManager.instance.ShowInterstitialAd();//UNITY
+        }
+        else
+        {
+            SceneManager.LoadScene("SampleScene");
+        }
     }
     public void NextBtn()
     {
         GameManager.instance.levelNumber++;//store
         PlayerPrefs.SetInt(GameManager.instance.levelKey,GameManager.instance.levelNumber);
-        SceneManager.LoadScene("SampleScene");
+
+        if (GameManager.instance.levelNumber % 2 == 0)
+        {
+            if (ADManager.instance.IsRewardedReady())
+            {
+                ADManager.instance.ShowRewardedAd();//UNITY
+            }
+            else if(ADManager.instance.IsInterstitialReady())                 
+            {
+                ADManager.instance.ShowInterstitialAd();//UNITY
+            }
+            else
+            {
+                SceneManager.LoadScene("SampleScene");
+            }
+        }
+        else
+        {
+            SceneManager.LoadScene("SampleScene");
+        }
     }
 }

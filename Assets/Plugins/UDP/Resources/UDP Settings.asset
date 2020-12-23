@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -107981364, guid: 7f448572ea9eb4f94a29da7a37eed74a, type: 3}
+  m_Name: UDP Settings
+  m_EditorClassIdentifier: 
+  UnityProjectID: 5c68e6d9-b410-4937-9018-82a87fd3c133
+  UnityClientID: W4y4aJOgshzNwoXF-kr4MA
+  UnityClientKey: KxBddPI4hQTTX46leuaKKahu38NVrgkohaBrI6wYBVU
+  UnityClientRSAPublicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtAzPEinpBjHit2aEc1thLOnuwezjJgubD5VPOXEeW2QOwLv8f4GfuY5WrrONk6lOv4dPceh2fVUFjSbHi/stc7dJqZw2xd9hSnKPgV7wEvgaeb3IpYsSA38fb5JrOeOPYDGv9MQQHf5XwtZdgM6F/F+DNgt1EiLJMrdoP4bHMFGjC1YLCmMOvr70xH9d438WL+f42uc40LhAXzotnvq6lRlHiiC5Kh19yN9YNXiDDOSx3Ne45yn5feQe2wKBLNMcjiDNxsA52r0oLxoRJ3xR1EnUM3EdknlTZ61glKrT9oGIYk0VGBPc0uL/QHYyPVps+pwo6sz3Q5SYt9rg26LpfwIDAQAB
+  AppName: 'Triple Jump: Space Run'
+  AppSlug: 42ae0aa8-7b2d-4046-8f2e-1c46c2367a7a
+  AppItemId: 5fde4639b650900025548da2
+  Permission: 

@@ -37,7 +37,9 @@ public class PlayerController : MonoBehaviour
             UIManager.instance.startPanel.SetActive(false);
             UIManager.instance.failedText.SetActive(true);
             UIManager.instance.retryBtn.SetActive(true);
-            gameObject.SetActive(false);
+            GetComponent<BoxCollider>().enabled = false;
+            GameManager.instance.hitfx.SetActive(true);
+            //gameObject.SetActive(false);
         }
         if (other.gameObject.CompareTag("escape"))
         {

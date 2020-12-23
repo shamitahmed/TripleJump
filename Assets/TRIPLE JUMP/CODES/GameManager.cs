@@ -11,8 +11,10 @@ public class GameManager : MonoBehaviour
     public bool escape;
     public string levelKey = "levelkey";
     public int levelNumber;
+    public string totalFailedKey = "totalFailedKey";
+    public int totalFailNumber;
     public GameObject escapeRocket;
-
+    public GameObject hitfx;
 
     private void Awake()
     {

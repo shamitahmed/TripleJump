@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UDP;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,10 +20,16 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         if (instance == null) instance = this;
+
     }
     // Start is called before the first frame update
     void Start()
-    {
+    {    
+        //Instantiate the listener
+        IInitListener listener = new InitListener();
+        //Use the listener to initialize the UDP stuff
+        StoreService.Initialize(listener);
+
         levelNumber = PlayerPrefs.GetInt(levelKey);
     }
 
